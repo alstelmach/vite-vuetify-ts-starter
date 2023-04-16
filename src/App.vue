@@ -1,15 +1,6 @@
 <template>
   <v-app :theme="theme">
-    <v-navigation-drawer v-model="drawer" temporary>
-      <drawer-component />
-    </v-navigation-drawer>
-
-    <v-app-bar>
-      <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <v-app-bar-title tag="h1">{{ title }}</v-app-bar-title>
-      <v-spacer />
-      <app-bar-menu-component />
-    </v-app-bar>
+    <app-bar-menu-component />
 
     <v-main>
       <router-view v-slot="{ Component, route }">
@@ -30,24 +21,19 @@ import {
   computed,
   nextTick,
   onMounted,
-  ref,
   watch,
   type ComputedRef,
-  type Ref,
   type WritableComputedRef,
 } from 'vue';
 
 import { getUserConfigStore, getAppStateStore } from '@/store/';
 
-import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
-import DrawerComponent from '@/components/DrawerComponent.vue';
+import AppBarMenuComponent from '@/components/AppBarMenuComponent/AppBarMenuComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 
 const appStateStore = getAppStateStore();
 const userConfigStore = getUserConfigStore();
-const title = 'Robercik';
 
-const drawer: Ref<boolean> = ref(false);
 const loading: WritableComputedRef<boolean> = computed({
   get: () => appStateStore.loading,
   set: loadingIncomingValue => appStateStore.setLoading(loadingIncomingValue),
@@ -60,7 +46,6 @@ const theme: ComputedRef<string> = computed(() =>
 watch(loading, async () => nextTick());
 
 onMounted(() => {
-  document.title = title;
   loading.value = false;
 });
 </script>

@@ -586,6 +586,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pinia/testing@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@pinia/testing@npm:0.0.16"
+  dependencies:
+    vue-demi: "*"
+  peerDependencies:
+    pinia: ">=2.0.34"
+  checksum: d1157624d1b9f6c45b947b03e583068d44fe3e46fd43cb2414d663c2436a5b28716217bb021cecadb1402d9658db7cb2a57c0b2bd54fb7db70158e43863da035
+  languageName: node
+  linkType: hard
+
 "@pkgr/utils@npm:^2.3.1":
   version: 2.3.1
   resolution: "@pkgr/utils@npm:2.3.1"
@@ -877,7 +888,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:^4.1.0":
+"@vitejs/plugin-vue@npm:^4.0.0":
   version: 4.1.0
   resolution: "@vitejs/plugin-vue@npm:4.1.0"
   peerDependencies:
@@ -1147,7 +1158,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:^2.3.2":
+"@vue/test-utils@npm:^2.2.7":
   version: 2.3.2
   resolution: "@vue/test-utils@npm:2.3.2"
   dependencies:
@@ -7514,14 +7525,15 @@ __metadata:
   resolution: "vite-vuetify-ts-starter@workspace:."
   dependencies:
     "@mdi/font": ^7.2.96
+    "@pinia/testing": ^0.0.16
     "@types/jsdom": ^21.1.1
     "@types/node": ^18.15.11
     "@types/webfontloader": ^1.6.35
     "@typescript-eslint/eslint-plugin": ^5.58.0
-    "@vitejs/plugin-vue": ^4.1.0
+    "@vitejs/plugin-vue": ^4.0.0
     "@vitest/coverage-c8": ^0.30.1
     "@vue/eslint-config-prettier": ^7.1.0
-    "@vue/test-utils": ^2.3.2
+    "@vue/test-utils": ^2.2.7
     "@vue/tsconfig": ^0.1.3
     core-js: ^3.30.1
     eslint: ^8.38.0

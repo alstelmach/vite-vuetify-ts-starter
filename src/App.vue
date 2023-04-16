@@ -40,8 +40,8 @@ import {
 import { getUserConfigStore, getAppStateStore } from '@/store/';
 
 import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
-import DrawerComponent from '@/components/DrawerComponent';
-import FooterComponent from '@/components/FooterComponent';
+import DrawerComponent from '@/components/DrawerComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 const appStateStore = getAppStateStore();
 const userConfigStore = getUserConfigStore();

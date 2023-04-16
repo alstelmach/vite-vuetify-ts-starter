@@ -1,4 +1,4 @@
-# Vue 3 + Typescript + Vite + Vuetify 3.1
+# Vue 3 starter template
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/480173/156953097-fe133174-2c02-4a7d-bb57-d28dd3332be2.png" alt="logo" width="300" height="300" />
@@ -53,19 +53,3 @@ When adding or deleting files, an error may occur and even if the error is corre
 ### Npm Scripts outputs `MODULE_NOT_FOUND`.
 
 Due to [yarn issues](https://github.com/yarnpkg/berry/issues/4448), it may not work properly if the path contains non-ASCII characters (such as 日本語 or 한국어, 中文 etc.).
-
-## Checklist
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the favicon in `public`
-- [ ] Remove the `.github` folder which contains the funding info
-- [ ] Clean up the READMEs and remove routes
-
-## See Also
-
-- [vite-vue2-ts-starter](https://github.com/logue/vite-vue2-ts-starter) - Vite Vue2 starter.
-- [vite-vue2-vuetify-ts-starter](https://github.com/logue/vite-vue2-vuetify-ts-starter) - UI library using Vuetify2
-- [laravel9-vite-vue2-starter](https://github.com/logue/laravel9-vite-vue2-starter) - Vue2 for Laravel9 + Breeze.
-- [vite-vue2-ts-ssr-starter](https://github.com/logue/vite-vue2-ts-ssr-starter) - SSR (Server Side Rendering) Version.

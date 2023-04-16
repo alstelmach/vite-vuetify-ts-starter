@@ -1,23 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "vite-vuetify-ts-starter",
-  "description": "Vue3 Vuetify TypeScript Startar project for Vite.",
+  "description": "Vue 3 starter template",
   "version": "1.3.5",
   "license": "MIT",
   "type": "module",
   "private": true,
-  "author": {
-    "name": "Logue",
-    "email": "logue@hotmail.co.jp",
-    "url": "https://logue.dev/"
-  },
   "homepage": "https://github.com/logue/vite-vuetify-ts-starter",
   "repository": {
     "type": "git",
     "url": "git@github.com:logue/vite-vuetify-ts-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/logue/vite-vuetify-ts-starter/issues"
+    "url": "https://github.com/alstelmach/vite-vuetify-ts-starter/issues"
   },
   "engines": {
     "node": ">=18.15.0",
@@ -31,8 +26,8 @@
     "build:analyze": "vite build --mode analyze",
     "build:clean": "rimraf dist",
     "preview": "vite preview",
-    "lint": "eslint . --fix && prettier . -w -u",
-    "lint:style": "stylelint \"./**/*.{css,sass,scss,htm,html,vue}\" --fix --cache-location ./node_modules/.vite/vite-plugin-stylelint  && prettier  \"./**/*.{css,sass,scss,htm,html,vue}\" -w -u",
+    "lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx,.vue && prettier . -w -u",
+    "lint:style": "stylelint \"./**/*.{css,sass,scss,htm,html,vue}\" --fix --cache-location ./node_modules/.vite/vite-plugin-stylelint --ext .js,.jsx,.ts,.tsx,.vue && prettier  \"./**/*.{css,sass,scss,htm,html,vue}\" -w -u",
     "test:unit": "vitest",
     "test:coverage": "vitest run --coverage",
     "build-only": "vite build",

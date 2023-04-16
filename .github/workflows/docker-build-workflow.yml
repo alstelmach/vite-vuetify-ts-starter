@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Build Docker image
-        run: docker build -t vue-starter .
+        run: docker build -t vue-starter --no-cache .

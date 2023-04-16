@@ -34,7 +34,7 @@ plugins:
   - yaml
   - vue
 rules:
-  require-jsdoc: warn
+  require-jsdoc: off
   no-unused-vars: warn
   '@typescript-eslint/array-type':
     - error
@@ -48,6 +48,7 @@ rules:
   '@typescript-eslint/prefer-nullish-coalescing': off
   '@typescript-eslint/strict-boolean-expressions': off
   '@typescript-eslint/triple-slash-reference': off
+  '@typescript-eslint/prefer-optional-chain': off
   import/default: off
   import/no-default-export: off
   tsdoc/syntax: warn

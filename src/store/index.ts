@@ -1,15 +1,15 @@
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+import persistencePlugin from 'pinia-plugin-persistedstate';
 import { createPinia, type Pinia } from 'pinia';
 
-// Pinia Stores
-
-import useGlobal from '@/store/GlobalStore';
-import useConfig from '@/store/ConfigStore';
-
-/** Pinia Store */
 const pinia: Pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
+pinia.use(persistencePlugin);
 
 export default pinia;
 
-export { useConfig, useGlobal };
+import getAppStateStore from './AppStateStore';
+import getUserConfigStore from './UserConfigStore';
+
+export {
+  getAppStateStore,
+  getUserConfigStore,
+};

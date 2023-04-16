@@ -1,55 +1,9 @@
-<script setup lang="ts">
-import { createVuetify } from 'vuetify';
-import Meta from '@/Meta';
-
-const title = import.meta.env.VITE_APP_TITLE;
-
-/** Props */
-defineProps<{
-  msg: string;
-}>();
-</script>
-
 <template>
   <v-container class="fill-height">
     <v-responsive class="d-flex align-center text-center fill-height">
-      <v-img
-        src="@/assets/logo.svg"
-        alt="vuetify"
-        :width="256"
-        class="logo mx-auto"
-      />
-      <h1 class="text-h2 font-weight-bold mb-3">
-        Welcome to the Vuetify
-        {{ 'v' + createVuetify.version }}
-      </h1>
-      <p>{{ msg }}</p>
-      <p class="text-medium-emphasis">
-        <a
-          href="https://github.com/logue/vite-vuetify-ts-starter"
-          target="_blank"
-        >
-          vite-vuetify-ts-starter
-        </a>
-        &nbsp;/&nbsp;Build:
-        <time
-          :datetime="Meta.date"
-          v-text="new Date(Meta.date).toLocaleString()"
-        />
-      </p>
-      <v-alert
-        v-if="!title"
-        variant="tonal"
-        density="compact"
-        type="warning"
-        class="my-3 w-75 mx-auto"
-      >
-        Please define
-        <code>VITE_APP_TITLE</code>
-        variable in to
-        <code>.env</code>
-        file.
-      </v-alert>
+      <v-img src="@/assets/logo.svg" alt="vuetify" style="height: 300px" />
+      <div class="py-6" />
+      <h1 class="text-h2 font-weight-bold">Let's build the app :)</h1>
       <div class="py-10" />
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
@@ -99,10 +53,3 @@ defineProps<{
     </v-responsive>
   </v-container>
 </template>
-
-<style scoped>
-.logo:hover {
-  will-change: filter;
-  filter: drop-shadow(0 0 1em #2196f3aa);
-}
-</style>

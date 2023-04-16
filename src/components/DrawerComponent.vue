@@ -52,6 +52,6 @@ const items: DrawerMenuItem[] = [
     title: 'About',
     icon: 'mdi-information',
     to: { name: 'About' },
-  }
+  },
 ];
 </script>

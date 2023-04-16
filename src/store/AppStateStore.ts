@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia';
 
-const viewDetails:string = 'view-details';
+const viewDetails: string = 'view-details';
 
-type ViewDetailsState = {
+interface ViewDetailsState {
   _loading: boolean;
-};
+}
 
 export default defineStore(viewDetails, {
   state: (): ViewDetailsState => ({

@@ -1,0 +1,21 @@
+﻿name: ESLint Check
+
+on: [push, pull_request]
+
+jobs:
+  eslint_check:
+    name: ESLint Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Install packages
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx,.vue --max-warnings 0 --config .eslintrc.yml

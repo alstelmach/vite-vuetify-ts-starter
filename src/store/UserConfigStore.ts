@@ -1,18 +1,19 @@
 import { defineStore } from 'pinia';
 
-const stateKey:string = 'user-config';
+const stateKey: string = 'user-config';
 
-type ConfigState = {
+interface ConfigState {
   _darkThemeModeEnabled: boolean;
   _currentLocale: string;
-};
+}
 
 export default defineStore(stateKey, {
   state: (): ConfigState => ({
-    _darkThemeModeEnabled: window.matchMedia('(prefers-color-scheme: dark)').matches,
+    _darkThemeModeEnabled: window.matchMedia('(prefers-color-scheme: dark)')
+      .matches,
     _currentLocale:
-      (window.navigator.languages && window.navigator.languages[0])
-      || window.navigator.language,
+      (window.navigator.languages && window.navigator.languages[0]) ||
+      window.navigator.language,
   }),
   getters: {
     isDarkModeEnabled: (state): boolean => state._darkThemeModeEnabled,

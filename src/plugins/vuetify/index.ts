@@ -7,10 +7,11 @@ import * as directives from 'vuetify/directives';
 import { en } from 'vuetify/locale';
 
 import { loadFonts } from './WebFontLoader';
-await loadFonts();
 
 import 'vuetify/styles';
 import '@mdi/font/css/materialdesignicons.css';
+
+await loadFonts();
 
 export { components, directives };
 

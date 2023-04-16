@@ -41,7 +41,7 @@ import { getUserConfigStore, getAppStateStore } from '@/store/';
 
 import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
 import DrawerComponent from '@/components/DrawerComponent';
-import FooterComponent from "@/components/FooterComponent";
+import FooterComponent from '@/components/FooterComponent';
 
 const appStateStore = getAppStateStore();
 const userConfigStore = getUserConfigStore();
@@ -57,10 +57,7 @@ const theme: ComputedRef<string> = computed(() =>
   userConfigStore.isDarkModeEnabled ? 'dark' : 'light'
 );
 
-watch(
-  loading,
-  async () => nextTick()
-);
+watch(loading, async () => nextTick());
 
 onMounted(() => {
   document.title = title;

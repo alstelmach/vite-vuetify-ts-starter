@@ -56,7 +56,7 @@ rules:
     - error
     - html:
         void: always
-  vue/multi-word-component-names: warn
+  vue/multi-word-component-names: off
   vue/no-template-shadow: off # for Vuetify tooltip fix
   vuetify/no-deprecated-components: warn # for Vuetify Labs Fix (v-data-tables etc.)
 settings:

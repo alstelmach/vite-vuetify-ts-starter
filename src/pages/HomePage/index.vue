@@ -5,5 +5,5 @@
 </template>
 
 <script setup lang="ts">
-import HelloWorldComponent from '@/components/HelloWorldComponent.vue';
+import HelloWorldComponent from './components/HelloWorldComponent';
 </script>

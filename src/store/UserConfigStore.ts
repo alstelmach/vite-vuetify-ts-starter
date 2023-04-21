@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
 
-const stateKey: string = 'user-config';
+const userConfigStoreKey: string = 'user-config';
 
 interface ConfigState {
   _darkThemeModeEnabled: boolean;
   _currentLocale: string;
 }
 
-export default defineStore(stateKey, {
+export default defineStore(userConfigStoreKey, {
   state: (): ConfigState => ({
     _darkThemeModeEnabled: window.matchMedia('(prefers-color-scheme: dark)')
       .matches,
@@ -28,7 +28,7 @@ export default defineStore(stateKey, {
     },
   },
   persist: {
-    key: stateKey,
+    key: userConfigStoreKey,
     storage: window.sessionStorage,
   },
 });

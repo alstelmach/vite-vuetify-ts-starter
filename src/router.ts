@@ -11,7 +11,7 @@ import { nextTick } from 'vue';
 import { getAppStateStore } from '@/store/index';
 
 import AboutPage from '@/pages/AboutPage.vue';
-import HomePage from '@/pages/HomePage.vue';
+import HomePage from '@/pages/HomePage';
 
 const routes: RouteRecordRaw[] = [
   {

@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
 
-const viewDetails: string = 'view-details';
+const appStateStoreKey: string = 'app-state';
 
-interface ViewDetailsState {
+interface AppState {
   _loading: boolean;
 }
 
-export default defineStore(viewDetails, {
-  state: (): ViewDetailsState => ({
+export default defineStore(appStateStoreKey, {
+  state: (): AppState => ({
     _loading: true,
   }),
   getters: {
